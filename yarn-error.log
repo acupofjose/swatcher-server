@@ -1,0 +1,57 @@
+Arguments: 
+  /usr/local/bin/node /Users/schultzjosephj/.yarn/bin/yarn.js add node-zip @types/node-zip
+
+PATH: 
+  /Users/schultzjosephj/.yarn/bin:/Users/schultzjosephj/.config/yarn/global/node_modules/.bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/MacGPG2/bin:/usr/local/share/dotnet:~/.dotnet/tools:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/Users/schultzjosephj/.yarn/bin:/Users/schultzjosephj/.config/yarn/global/node_modules/.bin:/usr/local/share/npm/bin:/usr/local/share/npm/bin
+
+Yarn version: 
+  1.17.3
+
+Node version: 
+  10.16.2
+
+Platform: 
+  darwin x64
+
+Trace: 
+  Error: https://registry.yarnpkg.com/@types%2fnode-zip: Not found
+      at Request.params.callback [as _callback] (/Users/schultzjosephj/.yarn/lib/cli.js:66830:18)
+      at Request.self.callback (/Users/schultzjosephj/.yarn/lib/cli.js:140464:22)
+      at Request.emit (events.js:198:13)
+      at Request.<anonymous> (/Users/schultzjosephj/.yarn/lib/cli.js:141436:10)
+      at Request.emit (events.js:198:13)
+      at IncomingMessage.<anonymous> (/Users/schultzjosephj/.yarn/lib/cli.js:141358:12)
+      at Object.onceWrapper (events.js:286:20)
+      at IncomingMessage.emit (events.js:203:15)
+      at endReadableNT (_stream_readable.js:1145:12)
+      at process._tickCallback (internal/process/next_tick.js:63:19)
+
+npm manifest: 
+  {
+    "name": "node-sandbox",
+    "version": "1.0.0",
+    "description": "Simple Node Sandbox",
+    "main": "lib/server.js",
+    "scripts": {
+      "compile": "tsc && node .",
+      "start": "./node_modules/nodemon/bin/nodemon.js -e ts  --exec \"npm run compile\""
+    },
+    "dependencies": {
+      "@types/color": "3.0.0",
+      "@types/express": "4.17.1",
+      "@types/node": "12.7.4",
+      "body-parser": "1.19.0",
+      "color": "3.1.2",
+      "express": "4.17.1",
+      "typescript": "3.6.2"
+    },
+    "devDependencies": {
+      "nodemon": "1.18.4"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

@@ -1,0 +1,10 @@
+{
+  "compileOnSave": true,
+  "compilerOptions": {
+    "outDir": "lib",
+    "module": "commonjs",
+  },
+  "include": [
+    "src"
+  ]
+}
