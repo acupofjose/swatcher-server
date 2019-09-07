@@ -5,10 +5,12 @@ import * as path from "path";
 import * as fs from "fs-extra";
 import { v4 as uuidv4 } from "uuid";
 
+import * as Color from "onecolor";
+
 import { Router } from "express";
 
 import { sendError } from "../../utils";
-import Color = require("color");
+import { parse } from "querystring";
 
 const Vibrant = require("node-vibrant");
 const router = Router();
@@ -134,16 +136,15 @@ router.get("/export/procreate", (req, res, next) => {
   const data = [{ name, swatches: [] }];
 
   for (const color of colors) {
-    const hsl = Color(color).hsl() as any;
-    const [hue, saturation, brightness] = hsl.color;
-    const alpha = hsl.valpha;
+    const parsed = Color(color);
+    const hsv = parsed.hsv();
     const colorSpace = 0;
 
     data[0].swatches.push({
-      hue: hue / 100,
-      saturation: saturation / 100,
-      brightness: brightness / 100,
-      alpha,
+      hue: hsv.h(),
+      saturation: hsv.s(),
+      brightness: hsv.v(),
+      alpha: 1,
       colorSpace
     });
   }
