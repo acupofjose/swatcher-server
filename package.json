@@ -1,7 +1,9 @@
 {
   "name": "swatcher-server",
   "version": "1.0.0",
-  "description": "Simple Node Sandbox",
+  "description": "Server implementation for swatcher.app",
+  "author": "Joseph Schultz <joseph@acupajoe.io>",
+  "license": "MIT",
   "main": "lib/server.js",
   "scripts": {
     "develop": "./node_modules/.bin/tsc-watch --onSuccess \"node .\"",
