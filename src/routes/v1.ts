@@ -9,7 +9,7 @@ import * as Color from "onecolor";
 
 import { Router } from "express";
 
-import { sendError } from "../../utils";
+import { sendError } from "../utils";
 import { parse } from "querystring";
 
 const Vibrant = require("node-vibrant");
@@ -94,7 +94,6 @@ router.post("/upload/image", (req, res, next) => {
   req.pipe(req.busboy);
 
   // Parse Uploaded File
-  let data = "";
   let tempFile = temp.createWriteStream();
 
   // Register Upload Parse Handler

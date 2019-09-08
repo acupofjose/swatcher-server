@@ -6,7 +6,7 @@ import * as helmet from "helmet";
 
 import { sendError } from "./utils";
 
-import APIV1Routes from "./routes/api/v1";
+import APIV1Routes from "./routes/v1";
 
 const PORT = process.env.PORT || 8080;
 
@@ -20,7 +20,7 @@ app.use(busboy());
 app.use(bodyParser.json());
 
 // Routes
-app.use("/api/v1", APIV1Routes);
+app.use("/v1", APIV1Routes);
 
 // Catch-all
 app.use((req, res, next) => sendError(res, "Not Found"));
